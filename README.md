@@ -25,3 +25,10 @@ The `manifest.json` file, set to version 3, ties everything together. It declare
 Altogether, this structure is lightweight and efficient. The `background.js` file silently tracks your browsing in the background without disturbing your workflow. The `popup.html` provides a quick dashboard so you can see your personal productivity report at any time. This is a practical, self-contained time-tracking extension that can easily be expanded — for example, by classifying sites as “productive” or “unproductive,” or by adding weekly or daily summaries — making it a perfect base for further productivity analytics.
 
 Output:
+
+Tracked Time (Minutes)
+
+google.com → 8.50 mins  
+youtube.com → 17.20 mins  
+chat.openai.com → 5.33 mins  
+linkedin.com → 3.25 mins
