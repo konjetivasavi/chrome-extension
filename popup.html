@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Time Tracker</title>
+  <style>
+    body { font-family: Arial; padding: 10px; }
+    h2 { font-size: 16px; color: #007acc; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 5px; }
+  </style>
+</head>
+<body>
+  <h2>Tracked Time (Minutes)</h2>
+  <ul id="report"></ul>
+
+  <script>
+    chrome.storage.local.get(null, (data) => {
+      const report = document.getElementById("report");
+      for (let site in data) {
+        const mins = (data[site] / 60000).toFixed(2);
+        const li = document.createElement("li");
+        li.textContent = `${site}: ${mins} mins`;
+        report.appendChild(li);
+      }
+    });
+  </script>
+</body>
+</html>
